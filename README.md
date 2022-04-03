@@ -14,7 +14,7 @@ The python script (TDC.py) accepts a table (.txt, .tsv, .csv, .xlsx, .xls) as in
 # Accepted formats (.txt, .tsv, .csv, .xlsx, .xls)
 TopDownCrawl <input>
 
-ie: TopDownCrawl MEF2B_R1_k7_enrichment.tsv
+ie: TopDownCrawl MEF2B_R1_k7_enrichment.tsv (can be found in example folder)
 ```
 
 ### OUTPUT
