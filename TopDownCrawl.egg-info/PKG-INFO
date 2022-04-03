@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: TopDownCrawl
-Version: 0.0.2
+Version: 1.0.0
 Summary: TopDownCrawl is a tool for aligning quantitative binding data for k-mers from experiments such as SELEX-seq and SMiLE-seq
 Home-page: https://github.com/bhcooper/TopDownCrawl
 Author: Brendon Cooper
@@ -19,20 +19,31 @@ Top-Down-Crawl is able to rapidly align quantitative binding data from experimen
 The python script (TDC.py) accepts a table (.txt, .tsv, .csv, .xlsx, .xls) as input including the sequences in column 1, and the associated binding measurements in column 2. Values for reverse complements will be averaged if provided, or assumed to be equivalent if not. The first row is expected to contain header names of your choosing. An example input file is included (example_MEF2B_R1_E_k7.tsv).
 
 
-### STEP 1: Install Required Packages
+### STEP 1: Install Package with Dependencies
 
-`pip install pandas matplotlib logomaker fonts font-roboto`
+`pip install TopDownCrawl`
 
 ### STEP 2: Run Top-Down Crawl
+```
+# Accepted formats (.txt, .tsv, .csv, .xlsx, .xls)
+TopDownCrawl <input>
 
-`python TDC.py example_MEF2B_R1_E_k7.tsv`
+ie: TopDownCrawl MEF2B_R1_k7_enrichment.tsv (can be found in example folder)
+```
 
 ### OUTPUT
 ```
-<input>_aligned.tsv    Return aligned and reverse-complement-averaged input (tab-delimited)
-<input>_summary.tsv    Show how many sequences align to each shift
-<input>_PWM.png        Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
-<input>_PWM_rc.png     Reverse complement of the provided PWM
+# Aligned and reverse-complement-averaged input (tab-delimited)
+<input>_aligned.tsv
+
+# Show how many sequences align to each shift
+<input>_summary.tsv    
+
+# Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
+<input>_PWM.png        
+
+# Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
+<input>_PWM_rc.png
 ```
 
 

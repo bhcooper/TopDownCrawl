@@ -166,5 +166,5 @@ def TDC(filename):
     summary = summary.rename_axis("Shift")
     summary.to_csv(basename + "_TDC_summary.tsv", header=['# Sequences'], sep="\t", index=True)
     
-
-TDC(sys.argv[1])
+def main():
+    TDC(sys.argv[1])

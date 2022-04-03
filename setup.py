@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name = 'TopDownCrawl',
-    version = '0.0.3',
+    version = '1.0.0',
     author = 'Brendon Cooper',
     description = 'TopDownCrawl is a tool for aligning quantitative binding data for k-mers from experiments such as SELEX-seq and SMiLE-seq',
     long_description = long_description,
