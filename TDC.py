@@ -17,7 +17,7 @@ N = ["A", "C", "G", "T"]
 NN = ['AA', 'CA', 'GA', 'TA', 'AC', 'CC', 'GC', 'TC', 'AG', 'CG', 'GG', 'TG', 'AT', 'CT', 'GT', 'TT']
 alts = {"A":["C", "G", "T"],"C":["A", "G", "T"],"G":["A", "C", "T"],"T":["A", "C", "G"]}
 
-comp = {"A":"T", "C":"G", "G":"C", "T":"A", "N":"N", "-":"-"}
+comp = {"A":"T", "C":"G", "G":"C", "T":"A", "N":"N", "_":"_"}
 def rc(seqs):
     return np.array(["".join([comp[x] for x in seq][::-1]) for seq in seqs])
 
@@ -143,7 +143,7 @@ def TDC(filename):
     maxShift = np.max(crawl["Shift"])
     for i, item in crawl.iterrows():
         shift = item[2]
-        crawl.at[i, "Seqs"] = "-" * (minShift+shift) + item[0] + "-" * (maxShift-shift)
+        crawl.at[i, "Seqs"] = "_" * (minShift+shift) + item[0] + "_" * (maxShift-shift)
 
     crawl.to_csv(basename + "_aligned.tsv", index=False, header=crawl.columns, sep="\t")
 
