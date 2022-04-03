@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+TopDownCrawl/TopDownCrawl.py
+TopDownCrawl/__init__.py
+TopDownCrawl/__main__.py
+TopDownCrawl.egg-info/PKG-INFO
+TopDownCrawl.egg-info/SOURCES.txt
+TopDownCrawl.egg-info/dependency_links.txt
+TopDownCrawl.egg-info/entry_points.txt
+TopDownCrawl.egg-info/requires.txt
+TopDownCrawl.egg-info/top_level.txt

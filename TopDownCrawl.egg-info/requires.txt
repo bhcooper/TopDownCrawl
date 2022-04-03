@@ -1,0 +1,5 @@
+pandas
+matplotlib
+logomaker
+fonts
+font-roboto
