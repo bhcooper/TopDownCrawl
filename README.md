@@ -15,7 +15,7 @@ The python script (TDC.py) accepts a table (.txt, .tsv, .csv, .xlsx, .xls) as in
 
 ### OUTPUT
 ```
-<input>_aligned.tsv    Return aligned and reverse-complement-averaged input
+<input>_aligned.tsv    Return aligned and reverse-complement-averaged input (tab-delimited)
 <input>_summary.tsv    Show how many sequences align to each shift
 <input>_PWM.png        Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
 <input>_PWM_rc.png     Reverse complement of the provided PWM
