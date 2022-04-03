@@ -11,8 +11,9 @@ The python script (TDC.py) accepts a table (.txt, .tsv, .csv, .xlsx, .xls) as in
 
 ### STEP 2: Run Top-Down Crawl
 ```
-# Accepted formats: .txt, .tsv, .csv, .xlsx, .xls
+# Accepted formats (.txt, .tsv, .csv, .xlsx, .xls)
 TopDownCrawl <input_table>
+ie: TopDownCrawl MEF2B_R1_k7_enrichment.tsv
 ```
 
 ### OUTPUT
