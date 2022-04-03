@@ -10,13 +10,22 @@ The python script (TDC.py) accepts a table (.txt, .tsv, .csv, .xlsx, .xls) as in
 `pip install TopDownCrawl`
 
 ### STEP 2: Run Top-Down Crawl
-`# Accepted formats: .txt, .tsv, .csv, .xlsx, .xls`
-`TopDownCrawl <input_table>`
+```
+# Accepted formats: .txt, .tsv, .csv, .xlsx, .xls
+TopDownCrawl <input_table>
+```
 
 ### OUTPUT
 ```
-<input>_aligned.tsv    Return aligned and reverse-complement-averaged input (tab-delimited)
-<input>_summary.tsv    Show how many sequences align to each shift
-<input>_PWM.png        Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
-<input>_PWM_rc.png     Reverse complement of the provided PWM
+# Aligned and reverse-complement-averaged input (tab-delimited)
+<input>_aligned.tsv
+
+# Show how many sequences align to each shift
+<input>_summary.tsv    
+
+# Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
+<input>_PWM.png        
+
+# Position weight matrix (PWM) of the aligned input, weighting each sequence by its associated binding metric, removing the 2 most extreme shifts 
+<input>_PWM_rc.png
 ```
