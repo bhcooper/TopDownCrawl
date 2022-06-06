@@ -131,10 +131,20 @@ def TDC(filename):
         crawl = crawlRight(nextMax, crawl, lookup)
         nextMax = np.argmax(~crawl["Checked"] * crawl["Filled"])
     # print("Alignment complete")
-    print("Unable to align",len(lookup),"sequences")
 
 
     crawl = pd.DataFrame(crawl)
+
+    unique = set()
+    unaligned = list(lookup.keys())
+    for seq in unaligned:
+        if(not rc([seq])[0] in unique):
+            unique.add(seq)
+    unaligned = crawl[crawl['Seqs'].isin(unique)].copy()
+    unaligned = unaligned[["Seqs", scorename]]
+    unaligned.to_csv(basename + "_unaligned.tsv", index=False, sep="\t")
+    print("Unable to align",len(unique),"sequences")
+
     crawl = crawl[crawl["Filled"] == True]
 
     crawl = crawl[["Seqs", scorename, "Shift"]]
@@ -164,6 +174,8 @@ def TDC(filename):
 
     summary = crawl['Shift'].value_counts(sort=False).sort_index()
     summary = summary.rename_axis("Shift")
+    summary = summary.astype(str)
+    summary['Unaligned'] = str(len(unique))
     summary.to_csv(basename + "_TDC_summary.tsv", header=['# Sequences'], sep="\t", index=True)
     
 def main():

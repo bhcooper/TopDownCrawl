@@ -3,3 +3,5 @@ matplotlib
 logomaker
 fonts
 font-roboto
+xlrd
+openpyxl

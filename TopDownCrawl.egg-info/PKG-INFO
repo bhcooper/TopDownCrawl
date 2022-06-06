@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: TopDownCrawl
-Version: 1.0.0
+Version: 1.0.1
 Summary: TopDownCrawl is a tool for aligning quantitative binding data for k-mers from experiments such as SELEX-seq and SMiLE-seq
 Home-page: https://github.com/bhcooper/TopDownCrawl
 Author: Brendon Cooper
